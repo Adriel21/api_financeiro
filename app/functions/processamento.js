@@ -20,13 +20,14 @@ function simulacao(valorSolicitado, valorMinimo, taxaDeCusto, res) {
         });
     } else {
         valorTotal = valorSolicitado + valorMinimo;
+        custoDeEmissao = valorMinimo;
 
         console.log('Custo de Emissão (via valorMinimo):', valorMinimo);
         console.log('Valor Total (via valorMinimo):', valorTotal);
 
         res.status(200).json({
             mensagem: 'Simulação realizada com sucesso!',
-            valorMinimo,
+            custoDeEmissao,
             valorTotal
         });
     }
