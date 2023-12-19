@@ -1,11 +1,11 @@
 function simulacao(valorSolicitado, valorMinimo, taxaDeCusto, res) {
     console.log('Iniciando simulação...');
-    
+
     let custoDeEmissao;
     let valorTotal;
 
     let taxaDeCustoEmDecimal = taxaDeCusto / 100;
-    
+
     if (valorSolicitado * taxaDeCustoEmDecimal > valorMinimo) {
         custoDeEmissao = valorSolicitado * taxaDeCustoEmDecimal;
         valorTotal = valorSolicitado + custoDeEmissao;
@@ -15,8 +15,8 @@ function simulacao(valorSolicitado, valorMinimo, taxaDeCusto, res) {
 
         res.status(200).json({
             mensagem: 'Simulação realizada com sucesso!',
-            custoDeEmissao,
-            valorTotal
+            custoDeEmissao: custoDeEmissao.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+            valorTotal: valorTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
         });
     } else {
         valorTotal = valorSolicitado + valorMinimo;
@@ -27,8 +27,8 @@ function simulacao(valorSolicitado, valorMinimo, taxaDeCusto, res) {
 
         res.status(200).json({
             mensagem: 'Simulação realizada com sucesso!',
-            custoDeEmissao,
-            valorTotal
+            custoDeEmissao: custoDeEmissao.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+            valorTotal: valorTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
         });
     }
 
