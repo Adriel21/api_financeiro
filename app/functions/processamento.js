@@ -5,8 +5,8 @@ function simulacao(valorSolicitado, valorMinimo, taxaDeCusto, res) {
     const converterParaNumero = (valor) => {
         // Verifica se o valor é uma string antes de tentar substituir
         if (typeof valor === 'string') {
-            // Remove '.' caso exista e substitui ',' por '.' antes de converter para número
-            return parseFloat(valor.replace(/\./g, '').replace(',', '.'));
+            // Remove todas as vírgulas e pontos antes de converter para número
+            return parseFloat(valor.replace(/[,\.]/g, ''));
         }
         // Se não for uma string, retorna o valor como está
         return valor;
