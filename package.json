@@ -10,14 +10,14 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/Adriel21/mobile_api.git"
+      "url": "git+https://github.com/Adriel21/api_financeiro.git"
     },
     "author": "Adriel",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/Adriel21/mobile_api/issues"
+      "url": "https://github.com/Adriel21/api_financeiro/issues"
     },
-    "homepage": "https://github.com/Adriel21/mobile_api#readme",
+    "homepage": "https://github.com/Adriel21/api_financeiro#readme",
     "dependencies": {
       "cors": "^2.8.5",
       "express": "^4.18.2",
