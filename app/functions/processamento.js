@@ -1,22 +1,6 @@
 function simulacao(valorSolicitado, valorMinimo, taxaDeCusto, res) {
     console.log('Iniciando simulação...');
 
-    // Função para converter valores com ',' em números válidos
-    const converterParaNumero = (valor) => {
-        // Verifica se o valor é uma string antes de tentar substituir
-        if (typeof valor === 'string') {
-            // Remove todas as vírgulas e pontos antes de converter para número
-            return parseFloat(valor.replace(/[,\.]/g, ''));
-        }
-        // Se não for uma string, retorna o valor como está
-        return valor;
-    };
-
-    // Convertendo valores para números válidos
-    valorSolicitado = converterParaNumero(valorSolicitado);
-    valorMinimo = converterParaNumero(valorMinimo);
-    taxaDeCusto = converterParaNumero(taxaDeCusto);
-
     let custoDeEmissao;
     let valorTotal;
 
