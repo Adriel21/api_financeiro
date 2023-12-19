@@ -3,8 +3,13 @@ function simulacao(valorSolicitado, valorMinimo, taxaDeCusto, res) {
 
     // Função para converter valores com ',' em números válidos
     const converterParaNumero = (valor) => {
-        // Substitui ',' por '.' e converte para número
-        return parseFloat(valor.replace(',', '.'));
+        // Verifica se o valor é uma string antes de tentar substituir
+        if (typeof valor === 'string') {
+            // Remove '.' caso exista e substitui ',' por '.' antes de converter para número
+            return parseFloat(valor.replace(/\./g, '').replace(',', '.'));
+        }
+        // Se não for uma string, retorna o valor como está
+        return valor;
     };
 
     // Convertendo valores para números válidos
