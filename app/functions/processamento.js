@@ -16,7 +16,8 @@ function simulacao(valorSolicitado, valorMinimo, taxaDeCusto, res) {
         res.status(200).json({
             mensagem: 'Simulação realizada com sucesso!',
             custoDeEmissao: custoDeEmissao.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
-            valorTotal: valorTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+            valorTotal: valorTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+            valorSolicitado: valorSolicitado.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
         });
     } else {
         valorTotal = valorSolicitado + valorMinimo;
@@ -28,7 +29,8 @@ function simulacao(valorSolicitado, valorMinimo, taxaDeCusto, res) {
         res.status(200).json({
             mensagem: 'Simulação realizada com sucesso!',
             custoDeEmissao: custoDeEmissao.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
-            valorTotal: valorTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+            valorTotal: valorTotal.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+            valorSolicitado: valorSolicitado.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
         });
     }
 
