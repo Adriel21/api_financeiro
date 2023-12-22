@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (res) => {
     res.sender('Simulação de Empréstimo');
-}
+});
         
 app.post('/simulacao', (req, res) => {
     const { valorSolicitado, valorMinimo, taxaDeCusto } = req.body;
