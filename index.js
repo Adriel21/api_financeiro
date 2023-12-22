@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (res) => {
-    res.sender('Simulação de Empréstimo');
+    res.render('Simulação de Empréstimo');
 });
         
 app.post('/simulacao', (req, res) => {
