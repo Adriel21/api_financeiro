@@ -14,8 +14,8 @@ app.use(express.json());
 // Configurando suporte a dados de formulários (input)
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (res) => {
-    res.render('Simulação de Empréstimo');
+app.get('/', (req, res) => {
+    res.send('Simulação de Empréstimo');
 });
         
 app.post('/simulacao', (req, res) => {
